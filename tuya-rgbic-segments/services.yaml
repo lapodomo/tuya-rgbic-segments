@@ -1,0 +1,94 @@
+set_segments:
+  name: Set segments
+  description: Experimental service for the tested 20-segment strip. Preserve background
+    avoids mode/background writes; selected segments are sent sequentially.
+  fields:
+    entity_id:
+      name: Tuya Local entity
+      required: true
+      example: light.keuken_keuken_strip
+      selector:
+        entity: {}
+    segments:
+      name: Segments (1–20)
+      required: true
+      example:
+      - 3
+      - 4
+      selector:
+        object: {}
+    hue:
+      name: Hue
+      selector:
+        number:
+          min: 0
+          max: 360
+          mode: box
+    saturation:
+      name: Saturation
+      selector:
+        number:
+          min: 0
+          max: 100
+          mode: box
+    brightness:
+      name: Brightness
+      selector:
+        number:
+          min: 0
+          max: 100
+          mode: box
+    background_hue:
+      name: Background hue
+      selector:
+        number:
+          min: 0
+          max: 360
+          mode: box
+    background_saturation:
+      name: Background saturation
+      selector:
+        number:
+          min: 0
+          max: 100
+          mode: box
+    background_brightness:
+      name: Background brightness
+      selector:
+        number:
+          min: 0
+          max: 100
+          mode: box
+    background_temperature:
+      name: Background temperature
+      selector:
+        number:
+          min: 0
+          max: 1000
+          mode: box
+    preserve_background:
+      name: Preserve background
+      selector:
+        boolean: {}
+    erase:
+      name: Erase
+      selector:
+        boolean: {}
+    clear_others:
+      name: Clear others
+      selector:
+        boolean: {}
+    background_mode:
+      name: Background mode
+      selector:
+        select:
+          options:
+          - rgb
+          - white
+    write_mode:
+      name: Write mode
+      selector:
+        select:
+          options:
+          - individual
+          - full_pattern
