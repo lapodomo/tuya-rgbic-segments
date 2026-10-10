@@ -1,6 +1,6 @@
 # Tuya RGBIC Segments
 
-Experimentele Home Assistant-service voor onze geteste Tuya RGBIC-strip met 20 segmenten.
+Experimentele Home Assistant-service voor LSC 10m smartledstrip 2026 (action)  Tuya RGBIC-strip met 20 segmenten.
 Geen algemene ondersteuning voor alle Tuya RGBIC-strips.
 
 ## Vereisten
